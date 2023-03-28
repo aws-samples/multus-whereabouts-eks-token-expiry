@@ -12,6 +12,9 @@ The manifests has the sidecar with the updated RBAC settings also.
 
 N.B - You will have to build and push the container images and then update this in the multus/whereabouts daemonset manifests. Below can be used to build and push images to your ECR
 
+#### 													How To Build The Container Side-car Images
+
+```
 cd multus/
 
 docker build -t container_registry/multus-token-renew-amd:v0.1 .
@@ -23,5 +26,6 @@ docker build -t container_registry/whereabouts-token-renew-amd:v0.1 .
 docker push container_registry/multus-token-renew-amd:v0.1
 
 docker push container_registry/whereabouts-token-renew-amd:v0.1
+```
 
 Replace container_registry with your ECR details
