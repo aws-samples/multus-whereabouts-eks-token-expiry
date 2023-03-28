@@ -1,6 +1,8 @@
 ## Multus And Whereabouts Token Expiry Work-Around
 
-Summary Of Issue: The BoundServiceAccountTokenVolume feature is enabled by default in Kubernetes version 1.21 and later. This feature improves the security of service account tokens by allowing workloads running on Kubernetes to request JSON web tokens that are audience, time, and key bound.
+**Summary Of Issue:** The BoundServiceAccountTokenVolume feature is enabled by default in Kubernetes version 1.21 and later. 
+
+This feature improves the security of service account tokens by allowing workloads running on Kubernetes to request JSON web tokens that are audience, time, and key bound.
 
 What this means is that PODs that are not using the required SDK versions/procedure which requires token for communicating with the Kubernetes API will not be able to carry out operations that are dependent on the Kubernetes API server. So far Multus and whereabouts are the ones that have been identified.
 
