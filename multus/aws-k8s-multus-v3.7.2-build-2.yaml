@@ -188,7 +188,7 @@ spec:
       serviceAccountName: multus
       containers:
       - name: kube-multus
-        image: 155880749572.dkr.ecr.us-west-2.amazonaws.com/cicd/multus-cni:v3.8.1
+        image: 602401143452.dkr.ecr.us-west-2.amazonaws.com/eks/multus-cni:v3.7.2-eksbuild.2
         command: ["/entrypoint.sh"]
         args:
         - "--multus-conf-file=auto"
